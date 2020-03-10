@@ -19,29 +19,13 @@
             margin: 0;
         }
         </style>
-        <style>
-        .loader {
-            border: 16px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 16px solid blue;
-            border-bottom: 16px solid blue;
-            width: 120px;
-            height: 120px;
-            -webkit-animation: spin 2s linear infinite;
-             animation: spin 2s linear infinite;
-        }
-        @-webkit-keyframes spin {
-        0% { -webkit-transform: rotate(0deg); }
-        100% { -webkit-transform: rotate(360deg); }
-        }
-        @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-        }
-        </style>
         <title>Prototype</title>
     </head>
     <body>
+        <!--CSS Spinner-->
+<div class="spinner-wrapper">
+<div class="spinner"></div>
+</div>
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
@@ -733,6 +717,17 @@
         });
         map.on("layerremove", function(){
             resetLabels([layer_Pintadovolume3151_4]);
+        });
+        </script>
+        <script>
+        $(document).ready(function() {
+        //Preloader
+        preloaderFadeOutTime = 500;
+        function hidePreloader() {
+        var preloader = $('.spinner-wrapper');
+        preloader.fadeOut(preloaderFadeOutTime);
+        }
+        hidePreloader();
         });
         </script>
     </body>
