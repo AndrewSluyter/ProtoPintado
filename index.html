@@ -22,10 +22,8 @@
         <title>Prototype</title>
     </head>
     <body>
-        <!--CSS Spinner-->
-<div class="spinner-wrapper">
-<div class="spinner"></div>
-</div>
+        <h1>Loading</h1>
+      <progress value = "65" max = "100"/>
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
@@ -717,17 +715,6 @@
         });
         map.on("layerremove", function(){
             resetLabels([layer_Pintadovolume3151_4]);
-        });
-        </script>
-        <script>
-        $(document).ready(function() {
-        //Preloader
-        preloaderFadeOutTime = 500;
-        function hidePreloader() {
-        var preloader = $('.spinner-wrapper');
-        preloader.fadeOut(preloaderFadeOutTime);
-        }
-        hidePreloader();
         });
         </script>
     </body>
