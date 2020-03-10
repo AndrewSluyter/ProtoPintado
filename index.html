@@ -43,10 +43,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:15, minZoom:8
-        });
-        var map = L.map('map', {
-            renderer: L.canvas()
-        });
+        })
             var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://lsu.academia.edu/AndrewSluyter">Andrew Sluyter</a> &middot; <a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a> &middot; <a href="https://www.nhgis.org">NHGIS</a>');
         L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
